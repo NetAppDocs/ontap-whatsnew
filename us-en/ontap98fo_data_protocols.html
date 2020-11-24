@@ -502,11 +502,19 @@
 <p class="page-details">
   
     
-    <time datetime="2020-11-23 19:03:40 +0000">11/23/2020</time>
+    <time datetime="2020-11-24 19:40:48 +0000">11/24/2020</time>
     
   
 
 <span>Contributors
+  
+  <a target="_blank" href="https://github.com/adamn-ntap">
+    <img  class="avatar avatar-small"
+          alt="adamn-ntap"
+          width="20" height="20"
+          src="https://avatars3.githubusercontent.com/u/36739591?v=4"
+          style="border-radius: 50%;"/>
+  </a>
   
   <a target="_blank" href="https://github.com/netapp-dorianh">
     <img  class="avatar avatar-small"
@@ -536,10 +544,10 @@
 <div class="ulist">
 <ul>
 <li>
-<p>SAN</p>
+<p>NAS</p>
 </li>
 <li>
-<p>NAS</p>
+<p>SAN</p>
 </li>
 <li>
 <p>S3</p>
@@ -555,7 +563,7 @@
 <h2 id="nas-protocol-enhancements">NAS Protocol Enhancements</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Network Attached Storage (NAS) protocols refer to file-based transfer methods such as NFS and SMB/CIFS. The following section covers what enhancements were added to ONTAP 9.8 for NAS protocol support, as well as features that apply specifically to NAS, such as NetApp FlexGroup and FlexCache volumes.</p>
+<p>Network Attached Storage (NAS) protocols refer to file-based transfer methods such as NFS and SMB/CIFS. The following enhancements were added to ONTAP 9.8 for NAS protocol support, as well as features that apply specifically to NAS, such as NetApp FlexGroup and FlexCache volumes.</p>
 </div>
 <div class="sect2">
 <h3 id="nfs-enhancements">NFS Enhancements</h3>
@@ -581,23 +589,24 @@
 <div class="ulist">
 <ul>
 <li>
-<p><strong>SMB3- encrypted DC connections.</strong> Encryption over the wire for SMB DC connections.</p>
+<p><strong>SMB3-encrypted DC connections.</strong> Encryption over the wire for SMB DC connections.</p>
 </li>
 <li>
 <p><strong>Map SID to UID on Set Owner (-map- sid-to- uid-on-set-owner).</strong> This option controls whether ONTAP maps the Windows SID to a UNIX UID when setting ownership on files and folders. The option was added to improve the data migration experience for customers that experienced increased load on their Active Directory Servers. The default is <code>true</code>. (Fix for bug <a href="https://mysupport.netapp.com/site/bugs-online/product/ONTAP/BURT/1153207" target="_blank" rel="noopener">1153207</a>.)</p>
 </li>
 <li>
-<p><strong>Set Modebits when NFSv4_acl are inherited (-is-inherit-modebits-with-nfsv4acl-enabled)</strong>. Provides support for multiprotocol NAS interaction when SMB files are created in directories where NFSv4 ACLs have removed the default <code>OWNER@</code>, <code>GROUP@</code>,  and <code>EVERYONE@</code> ACLs, or those ACLs don’t have inherit flags set.  Default is <code>false</code>. (Fix for <a href="https://mysupport.netapp.com/site/bugs-online/product/ONTAP/BURT/820848" target="_blank" rel="noopener">bug 820848</a>.)</p>
+<p><strong>Set Modebits when NFSv4_acl are inherited (-is-inherit-modebits-with-nfsv4acl-enabled)</strong>. Provides support for multiprotocol NAS interaction when SMB files are created in directories where NFSv4 ACLs have removed the default <code>OWNER@</code>, <code>GROUP@</code>,  and <code>EVERYONE@</code> ACLs, or those ACLs don’t have inherit flags set. Default is <code>false</code>. (Fix for <a href="https://mysupport.netapp.com/site/bugs-online/product/ONTAP/BURT/820848" target="_blank" rel="noopener">bug 820848</a>.)</p>
 </li>
 </ul>
 </div>
-<div class="sect3">
-<h4 id="flexcache-volume-enhancements">FlexCache Volume Enhancements</h4>
+</div>
+<div class="sect2">
+<h3 id="flexcache-volume-enhancements">FlexCache Volume Enhancements</h3>
 <div class="paragraph">
-<p>NetApp FlexCache volumes are sparse, virtual caches comprised of NetApp FlexGroup volumes. These caches point back to an origin volume and populates data into the cache as it is requested from clients to provide fast, localized access anywhere you run ONTAP―whether in the cloud, at the edge, or in the datacenter―to provide a truly global namespace.</p>
+<p>NetApp FlexCache volumes are sparse, virtual caches comprised of NetApp FlexGroup volumes. These caches point back to an origin volume and populate data into the cache as it is requested from clients to provide fast, localized access anywhere you run ONTAP―whether in the cloud, at the edge, or in the datacenter―to provide a truly global namespace.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="./media/ontap98fo_image19.png" alt="Error: Missing Graphic Image"></span></p>
+<p>image:ontap98fo_image19.png</p>
 </div>
 <div class="paragraph">
 <p>For more information about FlexCache volumes, see <a href="https://www.netapp.com/pdf.html?item=/media/7336-tr4743pdf.pdf" target="_blank" rel="noopener">TR-4743: FlexCache in ONTAP</a>.</p>
@@ -625,13 +634,13 @@
 </ul>
 </div>
 </div>
-<div class="sect3">
-<h4 id="flexgroup-volume-enhancements">FlexGroup Volume Enhancements</h4>
+<div class="sect2">
+<h3 id="flexgroup-volume-enhancements">FlexGroup Volume Enhancements</h3>
 <div class="paragraph">
-<p>FlexGroup volumes are the NetApp ONTAP scale-out NAS solution, providing up to 20PB and 400 billion files in a single namespace, while offering automatically load- balanced parallel processing of high ingest workloads for a blend of capacity, performance, and simplicity.</p>
+<p>FlexGroup volumes are the NetApp ONTAP scale-out NAS solution, providing up to 20PB and 400 billion files in a single namespace, while offering automatically load-balanced parallel processing of high ingest workloads for a blend of capacity, performance, and simplicity.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="./media/ontap98fo_image20.png" alt="Error: Missing Graphic Image"></span></p>
+<p>image:ontap98fo_image20.png</p>
 </div>
 <div class="paragraph">
 <p>For more information about FlexGroup volumes, see <a href="https://www.netapp.com/us/media/tr-4571.pdf" target="_blank" rel="noopener">TR-4571: NetApp FlexGroup Volumes Best Practices</a>.</p>
@@ -700,26 +709,28 @@
 </ul>
 </div>
 </div>
-<div class="sect3">
-<h4 id="async-delete">Async Delete</h4>
+<div class="sect2">
+<h3 id="async-delete">Async Delete</h3>
 <div class="paragraph">
 <p>Async delete enables storage administrators to bypass the latency of the network by deleting directories from the CLI.</p>
 </div>
 <div class="paragraph">
-<p>If you have ever tried to delete a directory with many files in it over NFS or SMB, you know how painful that can be. Each operation must travel over the network via the NAS protocol that you are using, and then ONTAP must process those requests and respond. Depending on the network bandwidth available, client specs, or storage system, that process can take a long time.  Async delete saves significant time and allows clients to get back to work quicker.</p>
+<p>If you have ever tried to delete a directory with many files in it over NFS or SMB, you know how painful that can be. Each operation must travel over the network via the NAS protocol that you are using, and then ONTAP must process those requests and respond. Depending on the network bandwidth available, client specs, or storage system, that process can take a long time. Async delete saves significant time and allows clients to get back to work quicker.</p>
 </div>
 <div class="paragraph">
 <p>For more information on async delete, see <a href="https://www.netapp.com/us/media/tr-4571.pdf" target="_blank" rel="noopener">TR-4751: NetApp FlexGroup Volumes Best Practices</a>.</p>
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="san-enhancements">SAN Enhancements</h3>
-<div class="paragraph">
-<p>Storage Area Network (SAN) protocols refer to block-based data transfer methods such as FCP, iSCSI, and NVMe over Fibre Channel. The following section covers what enhancements were added to ONTAP 9.8 for SAN protocol support.</p>
 </div>
-<div class="sect3">
-<h4 id="all-san-array-asa">All-SAN Array (ASA)</h4>
+<div class="sect1">
+<h2 id="san-enhancements">SAN Enhancements</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Storage Area Network (SAN) protocols refer to block-based data transfer methods such as FCP, iSCSI, and NVMe over Fibre Channel. The following enhancements were added to ONTAP 9.8 for SAN protocol support.</p>
+</div>
+<div class="sect2">
+<h3 id="all-san-array-asa">All-SAN Array (ASA)</h3>
 <div class="paragraph">
 <p>ONTAP 9.7 introduced a new dedicated SAN platform called <a href="https://www.netapp.com/data-storage/san-storage-area-network/documentation/" target="_blank" rel="noopener">ASA</a>, with the goal of simplifying Tier-1 SAN deployments while drastically reducing the failover times in SAN environments by offering an active/active approach to SAN connectivity.</p>
 </div>
@@ -738,10 +749,10 @@
 <p><strong>MetroCluster over IP support.</strong> ASA can now be used for site failovers over IP networks.</p>
 </li>
 <li>
-<p><strong>SnapMirror Business Continuity support.</strong> ASA can be used with SnapMirror Business Continuity.  xref</p>
+<p><strong>SnapMirror Business Continuity (SM-BC) support.</strong> ASA can be used with SnapMirror Business Continuity.  xref</p>
 </li>
 <li>
-<p><strong>Host ecosystem expansion.</strong> HP-UX, Solaris,  and AIX support. See the <a href="https://mysupport.netapp.com/matrix/" target="_blank" rel="noopener">Interoperability Matrix</a> for details.</p>
+<p><strong>Host ecosystem expansion.</strong> HP-UX, Solaris, and AIX support. See the <a href="https://mysupport.netapp.com/matrix/" target="_blank" rel="noopener">Interoperability Matrix</a> for details.</p>
 </li>
 <li>
 <p><strong>Support for the A800 and A250 platforms.</strong></p>
@@ -752,8 +763,8 @@
 </ul>
 </div>
 </div>
-<div class="sect3">
-<h4 id="persistent-ports">Persistent Ports</h4>
+<div class="sect2">
+<h3 id="persistent-ports">Persistent Ports</h3>
 <div class="paragraph">
 <p>ASA adds an enhancement called Persistent Ports to improve failover times. Persistent ports in ONTAP offer much more resiliency and continuous data access for SAN hosts connecting to an ASA. Each node on the ASA maintains shadow fiber channel LIFs. This functionality is key to how ONTAP 9.8 reduces SAN failover time even more for the ASA. These LIFs maintain the same IDs of the partner LIFs, but they remain in standby mode. If there is a failover and an FC LIF must migrate to the partner node, then, rather than changing the IDs (which can increase failover times while the host negotiates that change), the shadow LIF becomes the new path. The host continues I/O on the same path, on the same ID, without a link-down notification and without any additional configuration required.</p>
 </div>
@@ -761,11 +772,11 @@
 <p>The following figure provides a failover example for persistent ports.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="./media/ontap98fo_image21.png" alt="Error: Missing Graphic Image"></span></p>
+<p>image:ontap98fo_image21.png</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="nvmefc">NVMe/FC</h4>
+<div class="sect2">
+<h3 id="nvmefc">NVMe/FC</h3>
 <div class="paragraph">
 <p>NVMe is a new SAN protocol that helps improve latency and performance with block workloads over traditional FCP and iSCSI.</p>
 </div>
@@ -773,7 +784,7 @@
 <p>This blog covers it nicely: <a href="https://blog.netapp.com/nvme-over-fabric/" target="_blank" rel="noopener">When You’re Implementing NVMe Over Fabrics, the Fabric Really Matters</a>.</p>
 </div>
 <div class="paragraph">
-<p>NetApp introduced support for NVMe over Fibre Channel in ONTAP 9.4 and has been adding feature enhancements in each release. ONTAP 9.8 continues that with some more additions to the protocol support.</p>
+<p>NetApp introduced support for NVMe over Fibre Channel in ONTAP 9.4 and has been adding feature enhancements in each release. ONTAP 9.8 adds the following:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -787,8 +798,10 @@
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="s3-enhancements">S3 Enhancements</h3>
+</div>
+<div class="sect1">
+<h2 id="s3-enhancements">S3 Enhancements</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Object storage with the S3 protocol is the newest addition to the ONTAP protocol family. Added as a public preview in ONTAP 9.7, S3 is now a fully supported protocol in ONTAP 9.8.</p>
 </div>
@@ -835,7 +848,6 @@
 </div>
 <div class="paragraph">
 <p><a href="ontap98fo_storage_efficiencies.html">Next: Storage Efficiencies</a></p>
-</div>
 </div>
 </div>
 </div>
