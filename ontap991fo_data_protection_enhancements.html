@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
   <head class="at-element-marker">
-  <title>Storage Efficiencies</title>
+  <title>Data protection enhancements</title>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
   <meta http-equiv="language" content="en">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta property="og:title" content="Storage Efficiencies" />
+  <meta property="og:title" content="Data protection enhancements" />
 	<meta property="og:type" content="website" />
-	<meta property="og:url" content="https://docs.netapp.com/us-en/ontap-whatsnew/ontap98fo_storage_efficiencies.html" />
-	<meta property="og:description" content="This page covers ONTAP 9.8 storage efficiencies, especially compression and those associated with NetApp FabricPool technology." />
+	<meta property="og:url" content="https://docs.netapp.com/us-en/ontap-whatsnew/ontap991fo_data_protection_enhancements.html" />
+	<meta property="og:description" content="Data protection in the context of this document refers to both the notion of off-site replication of data, as well as automated site infrastructure failovers..." />
   <meta property="og:image" content="https://docs.netapp.com/us-en/ontap-whatsnew/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
   <meta name="format-detection" content="telephone=no">
@@ -18,8 +18,8 @@
   <meta http-equiv="nss-type" content="Product Documentation"/>
   <meta http-equiv="nss-subtype" content="User Guide"/>
   
-  <meta name="description" content="This page covers ONTAP 9.8 storage efficiencies, especially compression and those associated with NetApp FabricPool technology.">
-  <meta name="keywords" content=" FabricPool, Compression, FlexClone, Snapshot, compaction, deduplication,">
+  <meta name="description" content="Data protection in the context of this document refers to both the notion of off-site replication of data, as well as automated site infrastructure failovers...">
+  <meta name="keywords" content=" replication, failover, disaster recovery, dr, synchronous, backup, archive">
   
   
 
@@ -297,7 +297,7 @@
           <a href="/us-en/ontap-whatsnew/">ONTAP&nbsp;What's&nbsp;New</a>
         </li>
         <li class="n-breadcrumb__list-item">
-          Storage Efficiencies
+          Data protection enhancements
         </li>
       </ul>
     </div>
@@ -334,6 +334,19 @@
 
 
 
+    <div class="n-pdf-section">
+  <span class="n-pdf-section-title">This page</span>
+</div>
+
+<li class="active">
+  <a target="_blank" href="/us-en/ontap-whatsnew/pdfs/pages/ontap991fo_data_protection_enhancements.pdf" >
+    <img src="/us-en/ontap-whatsnew/images/pdf.png" width="20" height="20"/>
+    Data protection enhancements
+  </a>
+</li>
+
+
+  
 
 
 
@@ -371,19 +384,6 @@
 
 
 
-    <div class="n-pdf-section">
-  <span class="n-pdf-section-title">This page</span>
-</div>
-
-<li class="active">
-  <a target="_blank" href="/us-en/ontap-whatsnew/pdfs/pages/ontap98fo_storage_efficiencies.pdf" >
-    <img src="/us-en/ontap-whatsnew/images/pdf.png" width="20" height="20"/>
-    Storage Efficiencies
-  </a>
-</li>
-
-
-  
 
 
 
@@ -417,7 +417,7 @@
         System Manager enhancements
       </a></li><li class=" "><a class="na-navbar-padding" href="ontap991fo_san_enhancements.html">
         SAN enhancements
-      </a></li><li class=" "><a class="na-navbar-padding" href="ontap991fo_data_protection_enhancements.html">
+      </a></li><li class="  active "><a class="na-navbar-padding" href="ontap991fo_data_protection_enhancements.html">
         Data protection enhancements
       </a></li><li class=" "><a class="na-navbar-padding" href="ontap991fo_other_major_additions.html">
         Other major additions
@@ -430,7 +430,7 @@
         Simplicity Enhancements
       </a></li><li class=" "><a class="na-navbar-padding" href="ontap98fo_data_protocols.html">
         Data Protocols
-      </a></li><li class="  active "><a class="na-navbar-padding" href="ontap98fo_storage_efficiencies.html">
+      </a></li><li class=" "><a class="na-navbar-padding" href="ontap98fo_storage_efficiencies.html">
         Storage Efficiencies
       </a></li><li class=" "><a class="na-navbar-padding" href="ontap98fo_data_protection.html">
         Data Protection
@@ -454,14 +454,14 @@
 
 
 <div class="n-doc__component-detail-heading-wrap">
-  <h1 class="n-doc__component-detail-heading">Storage Efficiencies</h1>
+  <h1 class="n-doc__component-detail-heading">Data protection enhancements</h1>
 </div>
 
 
 <p class="page-details">
   
     
-    <time datetime="2020-12-08 21:57:55 +0000">12/08/2020</time>
+    <time datetime="2021-05-07 13:37:13 +0000">05/07/2021</time>
     
   
 
@@ -478,7 +478,7 @@
 
 
   <span>
-    <a target="_blank" href="/us-en/ontap-whatsnew/pdfs/pages/ontap98fo_storage_efficiencies.pdf" role="button">
+    <a target="_blank" href="/us-en/ontap-whatsnew/pdfs/pages/ontap991fo_data_protection_enhancements.pdf" role="button">
       <img src="/us-en/ontap-whatsnew/images/pdf.png" width="20" height="20"/>Download PDF of this page</a>
   </span>
 
@@ -489,104 +489,220 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>Storage efficiencies include any features that reduce the amount of physical capacity taken up by data in a storage system. In ONTAP, these include the following:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Data compression</p>
-</li>
-<li>
-<p>Data compaction</p>
-</li>
-<li>
-<p>Data deduplication</p>
-</li>
-<li>
-<p>NetApp FabricPool</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Sometimes, these definitions can be stretched to include:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>NetApp FlexClone technology</p>
-</li>
-<li>
-<p>NetApp Snapshot copies</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Storage efficiencies are vital for keeping storage costs low by reducing the amount of physical hardware that you need to purchase. ONTAP can perform data reduction on systems inline (AFF systems) or post-process (all systems), with minimal effects on the system’s performance.</p>
-</div>
-<div class="paragraph">
-<p>In ONTAP 9.8, there are a number of enhancements available for storage efficiencies.</p>
+<p>Data protection in the context of this document refers to both the notion of off-site replication of data, as well as automated site infrastructure failovers. This section covers the latest data protection enhancements for ONTAP 9.9.1.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="fabricpool">FabricPool</h2>
+<h2 id="transparent-application-failover-for-san-with-snapmirror-business-continuity">Transparent application failover for SAN with SnapMirror Business Continuity</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>FabricPool is the NetApp data tiering technology that takes blocks marked as cold in a filesystem and bundles them into 4MB objects to be shipped off to cloud or S3 buckets. The idea is that cold data can use up to 80% of the total capacity in a storage system, so, rather than keep all of that on the performance tier, it’s better to move it to a lower cost storage solution.</p>
-</div>
-<div class="paragraph">
-<p>This all happens automatically in ONTAP via tiering policies that you can set, and you can find out how much cold data you have in your storage system today with Inactive Data Reporting. That way, you can evaluate whether FabricPool would actually save you money.</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="./media/ontap98fo_image22.png" alt="Error: Missing Graphic Image"></span></p>
-</div>
-<div class="paragraph">
-<p>When a client accesses a file that has been tiered to the cloud, only the requested blocks (not the entire file) are brought back to the performance tier for access.</p>
-</div>
-<div class="paragraph">
-<p>For more information on FabricPool, see <a href="https://www.netapp.com/pdf.html?item=/media/17239-tr4598pdf.pdf">TR-4598: FabricPool Best Practices</a> and <a href="https://soundcloud.com/techontap_podcast/episode-268-netapp-fabricpool-and-s3-in-ontap-98" target="_blank" rel="noopener">TR-4598: FabricPool Best Practices and Tech ONTAP Podcast Episode 268: NetApp FabricPool and S3 in ONTAP 9.8</a>.</p>
-</div>
-<div class="paragraph">
-<p>ONTAP 9.8 supports the following FabricPool features:</p>
+<p>NetApp SnapMirror is an industry-leading replication technology that can be leveraged for a variety of use cases, including the following:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><strong>Tiering from HDD aggregates.</strong> Prior to ONTAP 9.8, FabricPool tiering to cloud from ONTAP was only possible on SSD aggregates. ONTAP 9.8 now allows you to tier using FabricPool from HDD aggregates.</p>
+<p>Disaster recovery for quick site failovers during an outage and fast resyncs back to primary</p>
 </li>
 <li>
-<p><strong>Tiering to ONTAP S3.</strong> Since ONTAP S3 is now generally available, it’s now possible to tier from an ONTAP system using FabricPool to an ONTAP S3 bucket. This provides a way to repurpose aging capacity storage by using it as a FabricPool tier. And, by tiering to the same cluster, you get faster retrieval times than traversing a cloud network connection.</p>
+<p>Synchronous replication for up-to-the-second copies of data on a remote site</p>
 </li>
 <li>
-<p><strong>Increased Cooling Period.</strong> Prior to ONTAP 9.8, data would be marked as cold after a cooling period, with a maximum of 63 days. ONTAP 9.8 allows you to configure that maximum to be as high as 183 days. This is useful for data that might be accessed sporadically, such as data that gets accessed on a quarterly basis, such as financial reports.</p>
+<p>Backup and archive use cases (with more Snapshot copies on the destination than on the source)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/ontap/smbc/" target="_blank" rel="noopener">SnapMirror Business Continuity in ONTAP</a> extends what SnapMirror offers and provides fast, easy automated failover of synchronous SnapMirror relationships for application-level, granular data protection.</p>
+</div>
+<div class="paragraph">
+<p>SnapMirror Business Continuity makes use of a mediator to maintain quorum between sites and avoid split-brain scenarios in the event of a site failure. A new ONTAP Mediator software version (1.2) is now available and supports up to 10 ONTAP systems and automates switchovers of applications between sites within 120 seconds of failure.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/ontap991fo_image11.png" alt="Error: Missing Graphic Image"></span></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="metrocluster-over-ip">MetroCluster over IP</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>NetApp MetroCluster (MC) software is a solution that combines array-based clustering with synchronous replication to deliver continuous availability and zero data loss at the lowest cost. Administration of the array-based cluster is simpler because the dependencies and complexity normally associated with host-based clustering are eliminated.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/ontap991fo_image12.png" alt="Error: Missing Graphic Image"></span></p>
+</div>
+<div class="paragraph">
+<p>MetroCluster immediately duplicates all your mission-critical data on a transaction-by-transaction basis, providing uninterrupted access to your applications and data. Unlike standard data replication solutions, MetroCluster works seamlessly with your host environment to provide continuous data availability while eliminating the need to create and maintain complicated failover scripts.</p>
+</div>
+<div class="paragraph">
+<p>With MetroCluster, you can perform the following tasks:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Protect against hardware, network, or site failure with transparent switchover</p>
 </li>
 <li>
-<p><strong>Object tagging.</strong> When you tier to an S3 provider that offers Information Lifecycle Policies that manage data based on object tags, ONTAP 9.8 can tag objects tiered using FabricPool to incorporate into those policies.</p>
+<p>Eliminate planned and unplanned downtime and change management</p>
 </li>
 <li>
-<p><strong>Cloud retrieval.</strong> In some cases, you might need to pull all tiered data back from the cloud. Rather than having to access all the data, you can now run a job that retrieves the data from the cloud in ONTAP 9.8.</p>
+<p>Upgrade hardware and software without disrupting operations</p>
+</li>
+<li>
+<p>Deploy without complex scripting, application, or operating system dependencies</p>
+</li>
+<li>
+<p>Achieve continuous availability for VMware, Microsoft, Oracle, SAP, or any critical application</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>NetApp MetroCluster traditionally was implemented with a Fibre Channel backend, but more recent versions of ONTAP support the use of IP networks for the backend. This not only reduces cost and complexity for site failover infrastructure, but it also extends the range of MetroCluster to approximately 700km (or 300mi).</p>
+</div>
+<div class="paragraph">
+<p>ONTAP 9.9.1 brings the following advancements to MetroCluster.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Increased volume counts to 1600 per HA pair</p>
+</li>
+<li>
+<p>Shared layer-3 networks</p>
+<div class="ulist">
+<ul>
+<li>
+<p>No longer dependent on dedicated layer- 2 networks</p>
+</li>
+<li>
+<p>ONTAP must be directly connected to router</p>
+</li>
+<li>
+<p>No dynamic routing support</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Increased nodes per site (four per site, eight per cluster)</p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="when-to-choose-metrocluster-versus-snapmirror-business-continuity">When to choose MetroCluster versus SnapMirror Business Continuity</h3>
+<div class="paragraph">
+<p>Since MetroCluster and SnapMirror Business Continuity share some of the same feature sets (ability to leverage existing IP networks, automated failovers, synchronous replication), the question of “when should I use each” becomes more relevant.</p>
+</div>
+<div class="paragraph">
+<p>The answer depends on the following questions.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>What are your service level objectives?</p>
+</li>
+<li>
+<p>How granular do you want failovers to be?</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>MetroCluster provides automated infrastructure failovers for HA pairs and physical aggregates and supports SAN and NAS workloads, while SnapMirror Business Continuity offers application-level granularity for SAN workloads only.</p>
+</div>
+<div class="paragraph">
+<p>For more information on MetroCluster over IP, see <a href="https://www.netapp.com/pdf.html?item=/media/13481-tr4689pdf.pdf" target="_blank" rel="noopener">MetroCluster IP Solution Architecture and Design</a>.</p>
+</div>
+<div class="paragraph">
+<p>For more information on SnapMirror Business Continuity, see <a href="https://docs.netapp.com/us-en/ontap/smbc/" target="_blank" rel="noopener">SnapMirror Business Continuity in ONTAP</a>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="flexgroup-volume-data-protection">FlexGroup volume data protection</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>FlexGroup volumes are the NetApp ONTAP scale-out NAS solution, providing up to 20PB and 400 billion files in a single namespace, while offering automatically load-balanced parallel processing of high ingest workloads for a blend of capacity, performance, and simplicity.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/ontap991fo_image13.png" alt="Error: Missing Graphic Image"></span></p>
+</div>
+<div class="paragraph">
+<p>For more information about FlexGroup volumes, see <a href="https://www.netapp.com/us/media/tr-4571.pdf" target="_blank" rel="noopener">TR-4571: NetApp FlexGroup Volumes Best Practices</a>.</p>
+</div>
+<div class="paragraph">
+<p>In ONTAP 9.9.1, FlexGroup volumes support a variety of data protection configurations.</p>
+</div>
+<div class="sect2">
+<h3 id="cascading-and-fan-out-snapmirror">Cascading and fan-out SnapMirror</h3>
+<div class="paragraph">
+<p>A SnapMirror cascade allows a storage administrator to replicate to multiple sites in serial. For example, site A can replicate to site B (on-prem or cloud) and site B can then replicate that same volume to site C (on-prem or cloud).</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/ontap991fo_image14.png" alt="Error: Missing Graphic Image"></span></p>
+</div>
+<div class="paragraph">
+<p>SnapMirror fan-out can replicate from a source volume to multiple destination volumes. So site A can replicate a source FlexGroup to sites B and C (on-prem or cloud). This offers more flexibility and resiliency in data protection configurations.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/ontap991fo_image15.png" alt="Error: Missing Graphic Image"></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="storage-virtual-machine-disaster-recovery-svm-dr">Storage virtual machine disaster recovery (SVM-DR)</h3>
+<div class="paragraph">
+<p>SVM-DR is an ONTAP feature that allows you to replicate not just data volumes to a remote site, but also the SVM configuration details, such as CIFS shares, NFS exports, data LIFs, and even the NFS file handles to avoid remounts when failing over to the DR site.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/ontap991fo_image16.png" alt="Error: Missing Graphic Image"></span></p>
+</div>
+<div class="paragraph">
+<p>ONTAP 9.9.1 brings support for SVM-DR to FlexGroup volumes with the following limitations.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>No FabricPool support</p>
+</li>
+<li>
+<p>No FlexClone</p>
+</li>
+<li>
+<p>No SnapMirror fan-out</p>
+</li>
+<li>
+<p>No FlexVol convert without rebaseline</p>
 </li>
 </ul>
 </div>
 </div>
 </div>
+</div>
 <div class="sect1">
-<h2 id="compression">Compression</h2>
+<h2 id="snaplock-enhancements">SnapLock enhancements</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>ONTAP 9.8 introduced some data compression changes that help improve performance, as well as improving data reduction ratios on compressible datasets.</p>
+<p><a href="https://www.netapp.com/data-protection/ontap-security/snaplock-compliance/" target="_blank" rel="noopener">NetApp SnapLock</a> is the WORM compliance replication solution from NetApp. It provides integrated data protection for workloads that need to adhere to regulatory guidelines such as HIPAA, SEC 17a-4(f) rule, FINRA, and CFTC as well as national requirements for German-speaking countries (DACH).</p>
 </div>
 <div class="paragraph">
-<p>The main change for compression was to differentiate data into cold and hot classifications. Cold data is data that has not been accessed for a long time, and hot data is data that is frequently accessed. That means we want to less aggressively compress hot data and more aggressively compress cold data.</p>
+<p>Snaplock helps provide data integrity and retention, enabling electronic records to be both unalterable and rapidly accessible. SnapLock retention features are certified to meet strict records retention requirements as well as addressing an expanded set of retention requirements, including Legal Hold, Event-Based Retention, and Volume Append Mode.</p>
 </div>
 <div class="paragraph">
-<p>In ONTAP 9.8, hot data is compressed inline using 8K compression groups. Additionally, data deduplication happens before compression to add even more efficiency to the datasets.</p>
+<p>ONTAP 9.9.1 brings the following improvements to NetApp SnapLock:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://docs.netapp.com/ontap-9/index.jsp?topic=%2Fcom.netapp.doc.dot-cm-concepts%2FGUID-8A8108CF-499A-46FC-917F-A40FAD68C8D6.html" target="_blank" rel="noopener">Storage efficiency</a> support on WORM volumes. Support for data compaction, cross-volume/aggregate-level deduplication (AFF only), continuous segment cleaning,  and Temperature Sensitive Storage Efficiency.</p>
+</li>
+<li>
+<p>Ransomware protection for SnapLock volumes containing snapshot copies of LUNs.For more information on SnapLock, see <a href="https://www.netapp.com/pdf.html?item=/media/6158-tr4526pdf.pdf" target="_blank" rel="noopener">Compliant WORM Storage Using NetApp SnapLock</a>.</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p>Cold data is then compressed again in the background using a more aggressive 32K compression group. These changes mean better performance for hot data and better data reduction ratios for all data.</p>
-</div>
-<div class="paragraph">
-<p><a href="ontap98fo_data_protection.html">Next: Data Protection</a></p>
+<p>For more information on SnapLock, see <a href="https://www.netapp.com/pdf.html?item=/media/6158-tr4526pdf.pdf" target="_blank" rel="noopener">Compliant WORM Storage Using NetApp SnapLock</a>.</p>
 </div>
 </div>
 </div>
@@ -600,8 +716,8 @@
   <div class="page-nav-toolbar">
     <div class="page-nav-contribute"  >
       <div class="page-nav-contribute-title">CONTRIBUTE</div>
-      <a target="_blank" href="https://github.com/NetAppDocs/ontap-whatsnew/blob/main/ontap98fo_storage_efficiencies.adoc" class="btn btn-default githubEditButton" role="button"><img src="/us-en/ontap-whatsnew/images/github.png" class="github-icon" />Edit on GitHub</a>
-      <a target="_blank" href="https://github.com/NetAppDocs/ontap-whatsnew/issues/new?body=Page%3A%20[Storage Efficiencies](https://docs.netapp.com/us-en/ontap-whatsnew/ontap98fo_storage_efficiencies.html)" class="btn btn-default githubEditButton" role="button"><img src="/us-en/ontap-whatsnew/images/github.png" class="github-icon" />Request doc changes</a>
+      <a target="_blank" href="https://github.com/NetAppDocs/ontap-whatsnew/blob/main/ontap991fo_data_protection_enhancements.adoc" class="btn btn-default githubEditButton" role="button"><img src="/us-en/ontap-whatsnew/images/github.png" class="github-icon" />Edit on GitHub</a>
+      <a target="_blank" href="https://github.com/NetAppDocs/ontap-whatsnew/issues/new?body=Page%3A%20[Data protection enhancements](https://docs.netapp.com/us-en/ontap-whatsnew/ontap991fo_data_protection_enhancements.html)" class="btn btn-default githubEditButton" role="button"><img src="/us-en/ontap-whatsnew/images/github.png" class="github-icon" />Request doc changes</a>
       <a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  >Contributor's Guide</a>
     </div>
     <div class="page-nav-container">

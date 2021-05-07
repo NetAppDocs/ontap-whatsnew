@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
   <head class="at-element-marker">
-  <title>Storage Efficiencies</title>
+  <title>SAN enhancements</title>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
   <meta http-equiv="language" content="en">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta property="og:title" content="Storage Efficiencies" />
+  <meta property="og:title" content="SAN enhancements" />
 	<meta property="og:type" content="website" />
-	<meta property="og:url" content="https://docs.netapp.com/us-en/ontap-whatsnew/ontap98fo_storage_efficiencies.html" />
-	<meta property="og:description" content="This page covers ONTAP 9.8 storage efficiencies, especially compression and those associated with NetApp FabricPool technology." />
+	<meta property="og:url" content="https://docs.netapp.com/us-en/ontap-whatsnew/ontap991fo_san_enhancements.html" />
+	<meta property="og:description" content="ONTAP 9.9.1 delivers some important SAN-related enhancements. This section covers those features and includes links to documentations that go over those in f..." />
   <meta property="og:image" content="https://docs.netapp.com/us-en/ontap-whatsnew/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
   <meta name="format-detection" content="telephone=no">
@@ -18,8 +18,8 @@
   <meta http-equiv="nss-type" content="Product Documentation"/>
   <meta http-equiv="nss-subtype" content="User Guide"/>
   
-  <meta name="description" content="This page covers ONTAP 9.8 storage efficiencies, especially compression and those associated with NetApp FabricPool technology.">
-  <meta name="keywords" content=" FabricPool, Compression, FlexClone, Snapshot, compaction, deduplication,">
+  <meta name="description" content="ONTAP 9.9.1 delivers some important SAN-related enhancements. This section covers those features and includes links to documentations that go over those in f...">
+  <meta name="keywords" content=" SAN array, ASA, Scale out, NVMe/FC, NVMe over Fibre Channel">
   
   
 
@@ -297,7 +297,7 @@
           <a href="/us-en/ontap-whatsnew/">ONTAP&nbsp;What's&nbsp;New</a>
         </li>
         <li class="n-breadcrumb__list-item">
-          Storage Efficiencies
+          SAN enhancements
         </li>
       </ul>
     </div>
@@ -332,6 +332,19 @@
       
 
 
+    <div class="n-pdf-section">
+  <span class="n-pdf-section-title">This page</span>
+</div>
+
+<li class="active">
+  <a target="_blank" href="/us-en/ontap-whatsnew/pdfs/pages/ontap991fo_san_enhancements.pdf" >
+    <img src="/us-en/ontap-whatsnew/images/pdf.png" width="20" height="20"/>
+    SAN enhancements
+  </a>
+</li>
+
+
+  
 
 
 
@@ -371,19 +384,6 @@
 
 
 
-    <div class="n-pdf-section">
-  <span class="n-pdf-section-title">This page</span>
-</div>
-
-<li class="active">
-  <a target="_blank" href="/us-en/ontap-whatsnew/pdfs/pages/ontap98fo_storage_efficiencies.pdf" >
-    <img src="/us-en/ontap-whatsnew/images/pdf.png" width="20" height="20"/>
-    Storage Efficiencies
-  </a>
-</li>
-
-
-  
 
 
 
@@ -415,7 +415,7 @@
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="ontap991fo_system_manager_enhancements.html">
         System Manager enhancements
-      </a></li><li class=" "><a class="na-navbar-padding" href="ontap991fo_san_enhancements.html">
+      </a></li><li class="  active "><a class="na-navbar-padding" href="ontap991fo_san_enhancements.html">
         SAN enhancements
       </a></li><li class=" "><a class="na-navbar-padding" href="ontap991fo_data_protection_enhancements.html">
         Data protection enhancements
@@ -430,7 +430,7 @@
         Simplicity Enhancements
       </a></li><li class=" "><a class="na-navbar-padding" href="ontap98fo_data_protocols.html">
         Data Protocols
-      </a></li><li class="  active "><a class="na-navbar-padding" href="ontap98fo_storage_efficiencies.html">
+      </a></li><li class=" "><a class="na-navbar-padding" href="ontap98fo_storage_efficiencies.html">
         Storage Efficiencies
       </a></li><li class=" "><a class="na-navbar-padding" href="ontap98fo_data_protection.html">
         Data Protection
@@ -454,14 +454,14 @@
 
 
 <div class="n-doc__component-detail-heading-wrap">
-  <h1 class="n-doc__component-detail-heading">Storage Efficiencies</h1>
+  <h1 class="n-doc__component-detail-heading">SAN enhancements</h1>
 </div>
 
 
 <p class="page-details">
   
     
-    <time datetime="2020-12-08 21:57:55 +0000">12/08/2020</time>
+    <time datetime="2021-05-06 21:43:30 +0000">05/06/2021</time>
     
   
 
@@ -478,7 +478,7 @@
 
 
   <span>
-    <a target="_blank" href="/us-en/ontap-whatsnew/pdfs/pages/ontap98fo_storage_efficiencies.pdf" role="button">
+    <a target="_blank" href="/us-en/ontap-whatsnew/pdfs/pages/ontap991fo_san_enhancements.pdf" role="button">
       <img src="/us-en/ontap-whatsnew/images/pdf.png" width="20" height="20"/>Download PDF of this page</a>
   </span>
 
@@ -489,104 +489,96 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>Storage efficiencies include any features that reduce the amount of physical capacity taken up by data in a storage system. In ONTAP, these include the following:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Data compression</p>
-</li>
-<li>
-<p>Data compaction</p>
-</li>
-<li>
-<p>Data deduplication</p>
-</li>
-<li>
-<p>NetApp FabricPool</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Sometimes, these definitions can be stretched to include:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>NetApp FlexClone technology</p>
-</li>
-<li>
-<p>NetApp Snapshot copies</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Storage efficiencies are vital for keeping storage costs low by reducing the amount of physical hardware that you need to purchase. ONTAP can perform data reduction on systems inline (AFF systems) or post-process (all systems), with minimal effects on the system’s performance.</p>
-</div>
-<div class="paragraph">
-<p>In ONTAP 9.8, there are a number of enhancements available for storage efficiencies.</p>
+<p>ONTAP 9.9.1 delivers some important SAN-related enhancements. This section covers those features and includes links to documentations that go over those in further detail.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="fabricpool">FabricPool</h2>
+<h2 id="all-san-array-enhancements">All SAN Array enhancements</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>FabricPool is the NetApp data tiering technology that takes blocks marked as cold in a filesystem and bundles them into 4MB objects to be shipped off to cloud or S3 buckets. The idea is that cold data can use up to 80% of the total capacity in a storage system, so, rather than keep all of that on the performance tier, it’s better to move it to a lower cost storage solution.</p>
+<p>ONTAP 9.8 introduced the <a href="https://www.netapp.com/pdf.html?item=/media/10379-tr4515pdf.pdf" target="_blank" rel="noopener">All SAN Array</a> (ASA) to the NetApp product portfolio. In ONTAP 9.9.1, the ASA gets some highly coveted additions.</p>
 </div>
+<div class="sect2">
+<h3 id="scale-out-from-two-nodes-to-12-nodes">Scale-out from two nodes to 12 nodes</h3>
 <div class="paragraph">
-<p>This all happens automatically in ONTAP via tiering policies that you can set, and you can find out how much cold data you have in your storage system today with Inactive Data Reporting. That way, you can evaluate whether FabricPool would actually save you money.</p>
+<p>Prior to ONTAP 9.9.1, the ASA could only be a two-node cluster. However, SAN clusters in ONTAP can scale up to 12 nodes, which provides additional scale-out for performance and capacity in enterprise SAN environments. Now, the ASA can scale up to 12 nodes in a single cluster, provided all nodes in the cluster have the ASA personality. ASA models can be mixed in the same cluster (for instance, a two-node A400 HA pair with a two-node A800 HA pair).</p>
 </div>
+</div>
+<div class="sect2">
+<h3 id="nvmefc-support">NVMe/FC support</h3>
 <div class="paragraph">
-<p><span class="image"><img src="./media/ontap98fo_image22.png" alt="Error: Missing Graphic Image"></span></p>
+<p>The ASA can now take advantage of ultra-low latency NVMe over Fibre Channel in ONTAP 9.9.1. All that is required is a license for NVMe/FC and 32Gb FC target adapters.</p>
 </div>
+</div>
+<div class="sect2">
+<h3 id="in-place-conversion-from-aff-san-to-asa">In-place conversion from AFF SAN to ASA</h3>
 <div class="paragraph">
-<p>When a client accesses a file that has been tiered to the cloud, only the requested blocks (not the entire file) are brought back to the performance tier for access.</p>
+<p>With the assistance of a script and NetApp TME or Professional Services resources, you can convert existing AFF SAN clusters to ASA personalities without needing to migrate data. The only prerequisite is that if the cluster is serving any NAS or S3 data, those protocols and datasets should be removed prior to conversion.</p>
 </div>
-<div class="paragraph">
-<p>For more information on FabricPool, see <a href="https://www.netapp.com/pdf.html?item=/media/17239-tr4598pdf.pdf">TR-4598: FabricPool Best Practices</a> and <a href="https://soundcloud.com/techontap_podcast/episode-268-netapp-fabricpool-and-s3-in-ontap-98" target="_blank" rel="noopener">TR-4598: FabricPool Best Practices and Tech ONTAP Podcast Episode 268: NetApp FabricPool and S3 in ONTAP 9.8</a>.</p>
-</div>
-<div class="paragraph">
-<p>ONTAP 9.8 supports the following FabricPool features:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Tiering from HDD aggregates.</strong> Prior to ONTAP 9.8, FabricPool tiering to cloud from ONTAP was only possible on SSD aggregates. ONTAP 9.8 now allows you to tier using FabricPool from HDD aggregates.</p>
-</li>
-<li>
-<p><strong>Tiering to ONTAP S3.</strong> Since ONTAP S3 is now generally available, it’s now possible to tier from an ONTAP system using FabricPool to an ONTAP S3 bucket. This provides a way to repurpose aging capacity storage by using it as a FabricPool tier. And, by tiering to the same cluster, you get faster retrieval times than traversing a cloud network connection.</p>
-</li>
-<li>
-<p><strong>Increased Cooling Period.</strong> Prior to ONTAP 9.8, data would be marked as cold after a cooling period, with a maximum of 63 days. ONTAP 9.8 allows you to configure that maximum to be as high as 183 days. This is useful for data that might be accessed sporadically, such as data that gets accessed on a quarterly basis, such as financial reports.</p>
-</li>
-<li>
-<p><strong>Object tagging.</strong> When you tier to an S3 provider that offers Information Lifecycle Policies that manage data based on object tags, ONTAP 9.8 can tag objects tiered using FabricPool to incorporate into those policies.</p>
-</li>
-<li>
-<p><strong>Cloud retrieval.</strong> In some cases, you might need to pull all tiered data back from the cloud. Rather than having to access all the data, you can now run a job that retrieves the data from the cloud in ONTAP 9.8.</p>
-</li>
-</ul>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="compression">Compression</h2>
+<h2 id="single-lun-performance">Single LUN performance</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>ONTAP 9.8 introduced some data compression changes that help improve performance, as well as improving data reduction ratios on compressible datasets.</p>
+<p>Both ASA platforms and AFF SAN clusters gain the benefits of changes in ONTAP 9.9.1 that greatly improve single-LUN performance at peak workloads by way of parallelization of the SCSI stack to the LUN.</p>
 </div>
 <div class="paragraph">
-<p>The main change for compression was to differentiate data into cold and hot classifications. Cold data is data that has not been accessed for a long time, and hot data is data that is frequently accessed. That means we want to less aggressively compress hot data and more aggressively compress cold data.</p>
+<p>In the following table, tests on an A800 platform and an A300 platform compare performance for a single LUN workload, with nearly 4x performance for reads and 75% better performance for writes on the AFF A800 in ONTAP 9.9.1 against the same workload in ONTAP 9.8.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Platform</th>
+<th class="tableblock halign-left valign-top">Random read peak IOPS</th>
+<th class="tableblock halign-left valign-top">Random write peak IOPS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A800</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">+393%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">+75%</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A300</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">+245%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">+3.5%</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+These improvements do not affect multi-LUN applications (such as Logical Volume Manager).
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="nvme-over-fibre-channel-enhancements">NVMe over Fibre Channel enhancements</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In ONTAP 9.9.1, NVMe over Fibre Channel namespaces can now failover by way of an inactive remote path, providing greater overall resiliency for NVMe/FC applications.</p>
 </div>
 <div class="paragraph">
-<p>In ONTAP 9.8, hot data is compressed inline using 8K compression groups. Additionally, data deduplication happens before compression to add even more efficiency to the datasets.</p>
+<p><span class="image"><img src="./media/ontap991fo_image10.png" alt="Error: Missing Graphic Image"></span></p>
 </div>
 <div class="paragraph">
-<p>Cold data is then compressed again in the background using a more aggressive 32K compression group. These changes mean better performance for hot data and better data reduction ratios for all data.</p>
-</div>
-<div class="paragraph">
-<p><a href="ontap98fo_data_protection.html">Next: Data Protection</a></p>
+<p>In addition, ONTAP 9.9.1 introduces support for NVMe/FC with VMware virtualization workloads by providing vVol support and provisioning of namespaces through vCenter.</p>
 </div>
 </div>
 </div>
@@ -600,8 +592,8 @@
   <div class="page-nav-toolbar">
     <div class="page-nav-contribute"  >
       <div class="page-nav-contribute-title">CONTRIBUTE</div>
-      <a target="_blank" href="https://github.com/NetAppDocs/ontap-whatsnew/blob/main/ontap98fo_storage_efficiencies.adoc" class="btn btn-default githubEditButton" role="button"><img src="/us-en/ontap-whatsnew/images/github.png" class="github-icon" />Edit on GitHub</a>
-      <a target="_blank" href="https://github.com/NetAppDocs/ontap-whatsnew/issues/new?body=Page%3A%20[Storage Efficiencies](https://docs.netapp.com/us-en/ontap-whatsnew/ontap98fo_storage_efficiencies.html)" class="btn btn-default githubEditButton" role="button"><img src="/us-en/ontap-whatsnew/images/github.png" class="github-icon" />Request doc changes</a>
+      <a target="_blank" href="https://github.com/NetAppDocs/ontap-whatsnew/blob/main/ontap991fo_san_enhancements.adoc" class="btn btn-default githubEditButton" role="button"><img src="/us-en/ontap-whatsnew/images/github.png" class="github-icon" />Edit on GitHub</a>
+      <a target="_blank" href="https://github.com/NetAppDocs/ontap-whatsnew/issues/new?body=Page%3A%20[SAN enhancements](https://docs.netapp.com/us-en/ontap-whatsnew/ontap991fo_san_enhancements.html)" class="btn btn-default githubEditButton" role="button"><img src="/us-en/ontap-whatsnew/images/github.png" class="github-icon" />Request doc changes</a>
       <a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  >Contributor's Guide</a>
     </div>
     <div class="page-nav-container">
