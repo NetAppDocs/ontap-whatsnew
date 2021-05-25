@@ -13,6 +13,13 @@
   
   
     <url>
+      <loc>https://docs.netapp.com/us-en/ontap-whatsnew/</loc>
+      
+      <lastmod>2021-05-24T21:10:14+00:00</lastmod>
+      
+    </url>
+  
+    <url>
       <loc>https://docs.netapp.com/us-en/ontap-whatsnew/ontap98fo_data_protection.html</loc>
       
       <lastmod>2020-12-08T21:57:55+00:00</lastmod>
@@ -71,7 +78,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap-whatsnew/ontap991fo_netapp_ontap.html</loc>
       
-      <lastmod>2021-05-07T18:33:32+00:00</lastmod>
+      <lastmod>2021-05-24T21:10:14+00:00</lastmod>
       
     </url>
   
@@ -106,7 +113,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/ontap-whatsnew//search.html</loc>
       
-      <lastmod>2021-05-07T19:42:22+00:00</lastmod>
+      <lastmod>2021-05-25T13:13:30+00:00</lastmod>
       
     </url>
   
