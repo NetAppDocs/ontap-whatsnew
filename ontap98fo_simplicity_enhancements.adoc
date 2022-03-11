@@ -246,7 +246,9 @@ The following table provides a matrix of NetApp ONTAP version upgrades.
 
 This simplified upgrade process also provides a way for streamlined head upgrades. When a new hardware node is shipped, it has the latest ONTAP release installed. Previously, if your existing cluster was running an older ONTAP release, you had to either upgrade the existing nodes to the same ONTAP version as the new node or you had to downgrade the new node to the older ONTAP release. And, as a further complication, if the newer hardware could not be downgraded, you were forced to take a maintenance window to upgrade the existing cluster.
 
-With ONTAP 9.8’s 2-year revision window, now you can add new nodes into a cluster that have ONTAP versions within that range and the old nodes automatically upgrade to the new ONTAP release in the background, using the nondisruptive aggregate relocation upgrade process.
+With ONTAP 9.8's 2-year mixed-version window, you can now add new nodes running newer ONTAP versions into a cluster to allow controller refreshes by moving volumes from nodes running 9.8 to higher ONTAP versions. Also, the nondisruptive aggregate relocation upgrade process allows controller upgrade of systems that must run ONTAP 9.8 (for example, 8000-series systems) to newer models that are introduced in later ONTAP releases.
+
+It is recommended you limit the time that the ONTAP cluster operates in a mixed version state.  
 
 image:ontap98fo_image17.png[Error: Missing Graphic Image]
 
@@ -261,3 +263,5 @@ The basic steps are as follows:
 image:ontap98fo_image18.png[Error: Missing Graphic Image]
 
 link:ontap98fo_data_protocols.html[Next: Data Protocols]
+
+// issue #18, 10/03/2022
