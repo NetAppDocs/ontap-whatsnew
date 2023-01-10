@@ -35,4 +35,4 @@ This means the following applies:
 * Improved support for vVols, including an enhanced SAN vVol rebalancing command and enhancements to Storage Capability Profiles. For more information on the latest VMware virtualization support, see the following resources:
 
 * https://soundcloud.com/techontap_podcast/episode-263-virtualization-in-ontap-fall-2020-update[Tech ONTAP Podcast Episode 263: Virtualization in ONTAP – Fall 2020^]
-* https://www.netapp.com/us/media/tr-4597.pdf[TR-4597: VMware vSphere with ONTAP^]
+* https://docs.netapp.com/us-en/netapp-solutions/virtualization/vsphere_ontap_ontap_for_vsphere.html[TR-4597: VMware vSphere for ONTAP^]
